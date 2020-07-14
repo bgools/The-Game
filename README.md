@@ -1,16 +1,26 @@
-Flip Coin Game
-User vs Computer
+![Flip Coin Game](IMAGES/download.jpeg)
 
-Rules:
-First to 3 points win
-Player will guess Heads or Tails
-if the player guess correctly, they get a point
-if the player guesses incorrectly, the computer gets a point
-game ends when someone reaches 3 points
-if the player reaches 3 points first, then they win
-if the computer reaches 3 points first, then the computer wins
+# Flip Coin Game
+## User vs Computer
 
-Technologies:
-plan is to use if and else if statements to determine true and false
-if the player guess the correct outcome, then they get a point
-use the DOM to generate a Start button to initiate the coin spin - once you guess the outcome the coin will stop 2 sec later
+### Rules:
+* First to 3 points win
+* Player will guess Heads or Tails
+* If the player guess correctly, they get a point
+* If the player guesses incorrectly, the computer gets a point
+* Game ends when someone reaches 3 points
+
+### Technologies:
+* *if* and *else if* statements to determine true and false
+* *if* the player guess the correct outcome, then they get a point | *else* the computer gets a point
+* Use the DOM to generate a Start button to initiate the coin flip 
+* Once you guess the outcome, the results will generate 1.5 sec later
+
+### Pseudocode
+* __LOOP__ run loop until one player reaches 3 Total Points
+* **GET** the users guess *(create heads and tails button)*
+* **COMPARE** the users guess with the random outcome.
+* __*if*__ the users guess is true *(correct)*
+    * __ADD__ 1 point to the users Total Points
+* __*else*__
+    * __ADD__ 1 point to the computer Total Points
