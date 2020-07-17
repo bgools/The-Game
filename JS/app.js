@@ -2,6 +2,7 @@
 
 const player = [];
 const computer = [];
+var music = document.getElementById('myAudio');
 function game(){
     function coinFlip() {
         const playerChoice = prompt("Heads or Tails");
@@ -27,6 +28,9 @@ function game(){
         }
     }
     coinFlip()
+}
+function audio(){
+    music.play();
 }
 //console.log(player);
 //console.log(computer);
