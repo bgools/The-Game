@@ -3,6 +3,13 @@
 const player = [];
 const computer = [];
 
+function audio(){
+    var music = document.getElementById('myAudio');
+    music.volume = 0.1;
+    music.play();
+}
+window.onload = audio;
+
 function game(){
     function coinFlip() {
         const playerChoice = prompt("Heads or Tails");
@@ -28,19 +35,25 @@ function game(){
             console.log('Computer has ' + computer.length + ' points!');
             console.log('Player has ' + player.length + ' points!');
         }
-        //var gameOver = whoWon()
+
         if (player.length === 3) {
-            document.getElementById('winner').innerText = ('Player Wins!!!')
+            document.getElementById('winner').innerText = ('Player Wins!!!');
+            //alert("Game Over - refresh page to restart");
+            setTimeout(newGame, 6000);
+            
         }else if(computer.length === 3) {
-            document.getElementById('winner').innerText = ('Computer Wins!!!')
+            document.getElementById('winner').innerText = ('Computer Wins!!!');
+            //alert("Game Over - refresh page to restart");
+            setTimeout(newGame, 6000);
         }
     }
     coinFlip();
 }
-function audio(){
-    var music = document.getElementById('myAudio');
-    music.volume = 0.1;
-    music.play();
+
+
+
+function newGame(){
+    location.reload();
 }
 
 //function gameOver(){
