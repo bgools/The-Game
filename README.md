@@ -6,8 +6,8 @@
 ### Rules:
 * First to 3 points win
 * Player will guess Heads or Tails
-* If the player guess correctly, they get a point
-* If the player guesses incorrectly, the computer gets a point
+* If the player's guess is correct, they get a point
+* If the player's guess is incorrect, the computer gets a point
 * Game ends when someone reaches 3 points
 
 ### Technologies:

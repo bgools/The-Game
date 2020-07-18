@@ -8,6 +8,7 @@ function audio(){
     music.volume = 0.1;
     music.play();
 }
+audio() 
 
 window.onload = audio;
 
@@ -38,20 +39,20 @@ function game(){
         }
 
         if (results === 1){
-            document.getElementById("round_result").innerText = ("HEADS");
+            document.getElementById("round_result").innerText = ("RESULTS: HEADS");
         }else{
-            document.getElementById("round_result").innerText = ("TAILS");
+            document.getElementById("round_result").innerText = ("RESULTS: TAILS");
         }
 
         if (player.length === 3) {
             document.getElementById('winner').innerText = ('Player Wins!!!');
             //alert("Game Over - refresh page to restart");
-            setTimeout(newGame, 6000);
+            setTimeout(newGame, 15000);
             
         }else if(computer.length === 3) {
             document.getElementById('winner').innerText = ('Computer Wins!!!');
             //alert("Game Over - refresh page to restart");
-            setTimeout(newGame, 6000);
+            setTimeout(newGame, 15000);
         }
     }
     coinFlip();

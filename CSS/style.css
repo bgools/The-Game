@@ -65,6 +65,7 @@ h1 {
 
 h2 {
     color: #0a3369;
+    
 }
 
 ul {
@@ -78,4 +79,9 @@ p {
 .box {
     text-align: center;
     
+}
+
+.rResults {
+    background-color: black;
+    color: rgb(33, 33, 175)
 }
