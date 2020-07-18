@@ -8,6 +8,7 @@ function audio(){
     music.volume = 0.1;
     music.play();
 }
+
 window.onload = audio;
 
 function game(){
@@ -18,22 +19,28 @@ function game(){
         }
         var results = flip()
         if (results === 1 && playerChoice == "heads") {
-            console.log("Player Wins");        
+            //console.log("Player Wins");        
             player_win = player.push(results);
             document.getElementById('player_win').innerText = player_win;
-            console.log('Player has ' + player.length + ' points!');
-            console.log('Computer has ' + computer.length + ' points!');
+            //console.log('Player has ' + player.length + ' points!');
+            //console.log('Computer has ' + computer.length + ' points!');
         }else if(results === 2 && playerChoice == "tails"){
-            console.log("Player Wins");
+            //console.log("Player Wins");
             player.push(results);
-            console.log('Player has ' + player.length + ' points!');
-            console.log('Computer has ' + computer.length + ' points!');
+            //console.log('Player has ' + player.length + ' points!');
+            //console.log('Computer has ' + computer.length + ' points!');
         }else{
-            console.log("Computer Wins");        
+            //console.log("Computer Wins");        
             computer_win = computer.push(results);
             document.getElementById('computer_win').innerText = computer_win;
-            console.log('Computer has ' + computer.length + ' points!');
-            console.log('Player has ' + player.length + ' points!');
+            //console.log('Computer has ' + computer.length + ' points!');
+            //console.log('Player has ' + player.length + ' points!');
+        }
+
+        if (results === 1){
+            document.getElementById("round_result").innerText = ("HEADS");
+        }else{
+            document.getElementById("round_result").innerText = ("TAILS");
         }
 
         if (player.length === 3) {
