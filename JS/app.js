@@ -2,7 +2,7 @@
 
 const player = [];
 const computer = [];
-var music = document.getElementById('myAudio');
+
 function game(){
     function coinFlip() {
         const playerChoice = prompt("Heads or Tails");
@@ -12,7 +12,8 @@ function game(){
         var results = flip()
         if (results === 1 && playerChoice == "heads") {
             console.log("Player Wins");        
-            player.push(results);
+            player_win = player.push(results);
+            document.getElementById('player_win').innerText = player_win;
             console.log('Player has ' + player.length + ' points!');
             console.log('Computer has ' + computer.length + ' points!');
         }else if(results === 2 && playerChoice == "tails"){
@@ -22,16 +23,41 @@ function game(){
             console.log('Computer has ' + computer.length + ' points!');
         }else{
             console.log("Computer Wins");        
-            computer.push(results);
+            computer_win = computer.push(results);
+            document.getElementById('computer_win').innerText = computer_win;
             console.log('Computer has ' + computer.length + ' points!');
             console.log('Player has ' + player.length + ' points!');
         }
+        //var gameOver = whoWon()
+        if (player.length === 3) {
+            document.getElementById('winner').innerText = ('Player Wins!!!')
+        }else if(computer.length === 3) {
+            document.getElementById('winner').innerText = ('Computer Wins!!!')
+        }
     }
-    coinFlip()
+    coinFlip();
 }
 function audio(){
+    var music = document.getElementById('myAudio');
+    music.volume = 0.1;
     music.play();
 }
+
+//function gameOver(){
+//    if ((player.length + computer.length) === 5) {
+//        alert('GAME OVER');
+//    }else{
+//        coinFlip()
+//    }
+//    var finalResults = gameOver()
+//    if (player.length > computer.length){
+//        document.getElementById('winner')
+//        winner = 'Player is the Ultimate Champion'
+//    }else{
+//        document.getElementById('winner')
+//        winner = 'Computer is the Ultimate Champion'
+//    }
+//}
 //console.log(player);
 //console.log(computer);
 
